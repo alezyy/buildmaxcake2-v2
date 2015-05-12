@@ -373,3 +373,12 @@ Stack Trace:
 #3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsLeasesController), Object(CakeRequest))
 #4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2015-05-12 16:24:52 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
