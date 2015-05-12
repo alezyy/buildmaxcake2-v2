@@ -1,0 +1,375 @@
+2015-05-12 14:02:31 Error: [MissingDatasourceConfigException] The datasource configuration "authake" was not found in database.php
+Exception Attributes: array (
+  'config' => 'authake',
+)
+Request URL: /
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Model/ConnectionManager.php(91): ConnectionManager::_getConnectionObject('authake')
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Model/Model.php(3613): ConnectionManager::getDataSource('authake')
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Model/Model.php(1155): Model->setDataSource('authake')
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Model/Model.php(3640): Model->setSource('authake_rules')
+#4 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Model/Model.php(3018): Model->getDataSource()
+#5 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Model/Model.php(2990): Model->_readDataSource('all', Array)
+#6 /var/www/test.dev/buildmaxcake2-v2/app/Plugin/Authake/Model/Rule.php(42): Model->find('all', Array)
+#7 /var/www/test.dev/buildmaxcake2-v2/app/Plugin/Authake/Controller/Component/AuthakeComponent.php(252): Rule->getRules(NULL, true)
+#8 /var/www/test.dev/buildmaxcake2-v2/app/Plugin/Authake/Controller/Component/AuthakeComponent.php(267): AuthakeComponent->getRules(NULL)
+#9 /var/www/test.dev/buildmaxcake2-v2/app/Plugin/Authake/Controller/Component/AuthakeComponent.php(168): AuthakeComponent->isAllowed(Array)
+#10 /var/www/test.dev/buildmaxcake2-v2/app/Controller/AppController.php(52): AuthakeComponent->beforeFilter(Object(PagesController))
+#11 /var/www/test.dev/buildmaxcake2-v2/app/Controller/AppController.php(46): AppController->auth()
+#12 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#13 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#14 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#15 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#16 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#17 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2015-05-12 14:03:52 Error: [MissingLayoutException] Layout file "Layouts/bootstrap.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Layouts/bootstrap.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(514): View->_getLayoutFileName('bootstrap')
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(481): View->renderLayout('', 'bootstrap')
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render('home', NULL)
+#3 /var/www/test.dev/buildmaxcake2-v2/app/Controller/PagesController.php(68): Controller->render('home')
+#4 [internal function]: PagesController->display('home')
+#5 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#6 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#8 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-05-12 14:04:40 Error: [MissingControllerException] Controller class HomesController could not be found.
+Exception Attributes: array (
+  'class' => 'HomesController',
+  'plugin' => NULL,
+)
+Request URL: /
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 14:05:03 Error: [MissingViewException] View file "Homes/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Homes/index.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HomesController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 14:05:40 Error: [MissingHelperException] Helper class FlashHelper could not be found.
+Exception Attributes: array (
+  'class' => 'FlashHelper',
+  'plugin' => false,
+)
+Request URL: /
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Flash')
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(848): HelperCollection->__isset('Flash')
+#2 /var/www/test.dev/buildmaxcake2-v2/app/View/Layouts/home.ctp(53): View->__get('Flash')
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(961): include('/var/www/test.d...')
+#4 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(923): View->_evaluate('/var/www/test.d...', Array)
+#5 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(546): View->_render('/var/www/test.d...')
+#6 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(481): View->renderLayout('', 'home')
+#7 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#8 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#9 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HomesController), Object(CakeRequest))
+#10 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-05-12 14:21:30 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 14:38:59 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 14:56:27 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 15:14:51 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 15:30:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 15:31:11 Error: [MissingViewException] View file "Cities/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Cities/index.ctp',
+)
+Request URL: /cities
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CitiesController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 15:31:11 Error: [MissingViewException] View file "Cities/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Cities/index.ctp',
+)
+Request URL: /cities
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CitiesController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 15:31:23 Error: [MissingViewException] View file "States/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'States/index.ctp',
+)
+Request URL: /states
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(StatesController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 15:31:23 Error: [MissingViewException] View file "States/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'States/index.ctp',
+)
+Request URL: /states
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(StatesController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 15:31:29 Error: [MissingViewException] View file "Units/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Units/index.ctp',
+)
+Request URL: /units
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UnitsController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 15:31:29 Error: [MissingViewException] View file "Units/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Units/index.ctp',
+)
+Request URL: /units
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UnitsController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 15:31:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 15:32:42 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 15:38:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 15:38:22 Error: [MissingViewException] View file "States/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'States/index.ctp',
+)
+Request URL: /states
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(StatesController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 15:38:30 Error: [MissingViewException] View file "Units/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Units/index.ctp',
+)
+Request URL: /units
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UnitsController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 15:49:59 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 16:07:22 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 16:12:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 16:12:39 Error: [MissingViewException] View file "Units/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Units/index.ctp',
+)
+Request URL: /units
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UnitsController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 16:12:39 Error: [MissingViewException] View file "Units/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Units/index.ctp',
+)
+Request URL: /units
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UnitsController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 16:12:49 Error: [MissingViewException] View file "Cities/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Cities/index.ctp',
+)
+Request URL: /cities
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CitiesController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 16:12:49 Error: [MissingViewException] View file "Cities/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Cities/index.ctp',
+)
+Request URL: /cities
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CitiesController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 16:16:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 16:16:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 16:16:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 16:16:44 Error: [MissingViewException] View file "ApplicationsLeases/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'ApplicationsLeases/index.ctp',
+)
+Request URL: /applications_leases
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsLeasesController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-12 16:16:44 Error: [MissingViewException] View file "ApplicationsLeases/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'ApplicationsLeases/index.ctp',
+)
+Request URL: /applications_leases
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ApplicationsLeasesController), Object(CakeRequest))
+#4 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
