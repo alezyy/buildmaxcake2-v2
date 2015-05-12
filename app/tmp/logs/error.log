@@ -382,3 +382,21 @@ Request URL: /currentsetting.htm
 Stack Trace:
 #0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-05-12 16:42:21 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 16:45:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
