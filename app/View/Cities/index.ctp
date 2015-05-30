@@ -19,12 +19,47 @@
 					<div class="panel-heading"><?php echo(__('Search'))?></div>
 						<div class="panel-body">
 							<ul class="nav nav-pills nav-stacked">
-								<li><?php  ?></li>
+								<li><?php
+									echo $this->Search->create();
+										echo $this->Search->selectFields('filter1',
+    								    array(
+								            'City.id'       => __('ID', true),
+								            'City.country_id'     => __('Country', true),
+								            'City.state_id'     => __('State', true),
+								            'City.city' => __('City', true),
+								        ),
+								        array(
+								            'class' => 'select-box'
+								        )
+								 		   );
+
+									echo $this->Search->selectOperators('filter1',
+									        array(
+									            'LIKE' => __('containing', true),
+									            '='    => __('equal to', true)
+									        )
+									    );
+
+										echo $this->Search->input('filter1');
+										echo $this->Search->end(__('Filter', true));
+										echo $this->Html->link("Reset", array('action' => 'index'));
+
+
+										// try does options for filter
+										/*
+										echo $this->Search->create();
+										echo $this->Search->selectFields('filter1', null, array('class' => 'select-box'));
+										echo $this->Search->selectOperators('filter1');
+										echo $this->Search->input('filter1');
+										echo $this->Search->end(__('Filter', true));
+										*/
+
+										?>
+								</li>
 
 									<li><?php ?></li>
 
-
-													</ul>
+							</ul>
 						</div><!-- end body -->
 				</div><!-- end panel -->
 			</div><!-- end actions -->

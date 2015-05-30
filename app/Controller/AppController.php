@@ -35,11 +35,39 @@ App::import('Component', 'Session');
  */
 class AppController extends Controller {
 
- public $helpers = array('Form', 'Time', 'Html', 'Session', 'Js', 'Authake.Authake');
+ public $helpers = array('Form', 'Time', 'Html', 'Session', 'Js', 'Authake.Authake',
+			'FilterResults.Search' => array(
+				'operators' => array(
+				    'LIKE'       => 'containing',
+				    'NOT LIKE'   => 'not containing',
+				    'LIKE BEGIN' => 'starting with',
+				    'LIKE END'   => 'ending with',
+				    '='  => 'equal to',
+				    '!=' => 'different',
+				    '>'  => 'greater than',
+				    '>=' => 'greater or equal to',
+				    '<'  => 'less than',
+				    '<=' => 'less or equal to'
+			       		 )
+			    			));
+
+
+
  public   $components = array('Session','RequestHandler', 
 			  'Authake.Authake',
-			  'DebugKit.Toolbar');
+			 // 'DebugKit.Toolbar',
+			  'FilterResults.Filter' => array(
+       						  	 'auto' => array(
+         					  		 'paginate' => false,
+          					  		 'explode'  => true,  // recommended
+       									 ),
+        					   	'explode' => array(
+           					   		'character'   => ' ',
+           					   		'concatenate' => 'AND'
+        								)
+   				     			 ));
 
+ 
   // public $components = array('DebugKit.Toolbar');
    var $counter = 0;
     function beforeFilter(){

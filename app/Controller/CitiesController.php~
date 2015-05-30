@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('Sanitize', 'Utility');
 
 /**
  * Cities Controller
@@ -29,6 +30,17 @@ public $components = array('Paginator', 'RequestHandler', 'CsvView.CsvView','Ses
 	public function index() {
 		$this->City->recursive = 0;
 		$this->set('cities', $this->Paginator->paginate());
+
+		 // Add filter
+   		 $this->Filter->addFilters('filter1');
+    
+    		// Define conditions
+   		 $this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
+   		 $this->City->recursive = 0;
+    		 $this->set('cities', $this->paginate());
+
+
 	}
 
 /**
@@ -185,7 +197,7 @@ $this->set(compact('results' ,'_serialize', '_header', '_extract'));
 
   		if ($this->request->is('post')) {
 	
-		$this->City->create();
+		    
 
               $records_count = $this->City->find('count');
 
@@ -201,7 +213,7 @@ $this->set(compact('results' ,'_serialize', '_header', '_extract'));
 
 		$name3 = array_values($name2)[2] ;
 
-	        //debug($name1) ;
+	    //    debug($name1) ;
 
 		 // debug($name2) ;
 
@@ -213,7 +225,7 @@ $this->set(compact('results' ,'_serialize', '_header', '_extract'));
                 
                 $lines = file($name3);
 
-		$counter = 0;
+		    $counter = 0;
 	        $keys = array();
 
 		foreach($lines as $line) { 
@@ -231,15 +243,16 @@ $this->set(compact('results' ,'_serialize', '_header', '_extract'));
 			$keys[] = str_replace (array("\r\n", "\n", "\r"), ' ', $value);
 			
 		}
-                         echo "<pre>"; 
+        echo "<pre>"; 
 		print_r($keys);// add this instruction to see what the result is from the array 
 		echo "</pre>"; 
 	}else{
-		$string = '';
+	    $string = '';
 		$sc = 0;
 		$counted = count($rows);
-		foreach($keys as $k=>$v){
-			
+		//debug($counted) ;
+		foreach($keys as $v){
+			/*
 			if($sc==0){
 				//$string .= "SET $v = ".$rows[$sc].",";
 			}elseif($sc == 1){
@@ -250,15 +263,58 @@ $this->set(compact('results' ,'_serialize', '_header', '_extract'));
 				$string .= " $v = '".$rows[$sc]."'";
 				$string .= " WHERE id = '".$rows[0]."'";
 			}			
+				$sc++; */
+
+				$this->City->create();
+
+
+				$saveable = array(
+              'City' => array(
+                'country_id' => $v['GoogleNews']['title'],
+                'description' => $_one['GoogleNews']['description']
+              )
+            );
+
+
+
+				$string .= " $v = '".$rows[$sc]."'";
+
 				$sc++;
 		}
-			//	$sql = "UPDATE $dblink ".$string."";
-			//echo $sql."<br/>";	
+
+		      // debug($string) ;
+			   $sql = $string."";
+			   
+			   
+
+			   echo $sql."<br/>";	
+
+
+
+
+			 //  $this->City->save($sql) ;
+
+		 //$this->City->saveMany($sql) ;
+
 			//$result = mysql_query($sql, $dblink) or die("load -" . mysql_error());
 		}
-	
+	       
+
 		  
 	$counter++;
+
+          
+        /*
+       if ($this->City->save() {
+				$this->Session->setFlash(__('The city has been saved.'), 'default', array('class' => 'alert alert-success'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The city could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
+			}
+              */   
+
+
+
 	
      }
    
@@ -268,8 +324,10 @@ $this->set(compact('results' ,'_serialize', '_header', '_extract'));
 
 
 			}
+
+		
 	
 			
 
-                    
+			  
 		

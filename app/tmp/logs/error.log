@@ -400,3 +400,297 @@ Request URL: /js/bootstrap-theme.min.js
 Stack Trace:
 #0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-05-12 16:49:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-12 16:50:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-13 09:27:08 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 06:32:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 06:33:46 Error: [MissingControllerException] Controller class ParticipantsController could not be found.
+Exception Attributes: array (
+  'class' => 'ParticipantsController',
+  'plugin' => NULL,
+)
+Request URL: /participants/
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 06:41:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 07:07:27 Error: [MissingControllerException] Controller class Wp-adminController could not be found.
+Exception Attributes: array (
+  'class' => 'Wp-adminController',
+  'plugin' => NULL,
+)
+Request URL: /wp-admin/admin-ajax.php
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 07:08:27 Error: [MissingControllerException] Controller class Wp-adminController could not be found.
+Exception Attributes: array (
+  'class' => 'Wp-adminController',
+  'plugin' => NULL,
+)
+Request URL: /wp-admin/admin-ajax.php
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 07:10:27 Error: [MissingControllerException] Controller class Wp-adminController could not be found.
+Exception Attributes: array (
+  'class' => 'Wp-adminController',
+  'plugin' => NULL,
+)
+Request URL: /wp-admin/admin-ajax.php
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 07:12:27 Error: [MissingControllerException] Controller class Wp-adminController could not be found.
+Exception Attributes: array (
+  'class' => 'Wp-adminController',
+  'plugin' => NULL,
+)
+Request URL: /wp-admin/admin-ajax.php
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 07:14:06 Error: [MissingControllerException] Controller class Wp-adminController could not be found.
+Exception Attributes: array (
+  'class' => 'Wp-adminController',
+  'plugin' => NULL,
+)
+Request URL: /wp-admin/admin-ajax.php
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 09:46:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 09:52:52 Error: [MissingControllerException] Controller class ParticipantsController could not be found.
+Exception Attributes: array (
+  'class' => 'ParticipantsController',
+  'plugin' => NULL,
+)
+Request URL: /participants
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 09:53:21 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 09:56:29 Error: Fatal Error (1): Call to a member function allow() on a non-object in [/var/www/test.dev/buildmaxcake2-v2/app/Controller/ParticipantsController.php, line 27]
+2015-05-22 09:56:29 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /participants/add
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/test.d...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/test.d...', 27, Array)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/test.d...', 27, Array)
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-22 09:56:40 Error: Fatal Error (1): Call to a member function allow() on a non-object in [/var/www/test.dev/buildmaxcake2-v2/app/Controller/ParticipantsController.php, line 27]
+2015-05-22 09:56:40 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /participants
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/test.d...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/test.d...', 27, Array)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/test.d...', 27, Array)
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-22 09:59:03 Error: Fatal Error (1): Call to a member function allow() on a non-object in [/var/www/test.dev/buildmaxcake2-v2/app/Controller/ParticipantsController.php, line 27]
+2015-05-22 09:59:03 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /participants/add
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/test.d...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/test.d...', 27, Array)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/test.d...', 27, Array)
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-22 09:59:06 Error: Fatal Error (1): Call to a member function allow() on a non-object in [/var/www/test.dev/buildmaxcake2-v2/app/Controller/ParticipantsController.php, line 27]
+2015-05-22 09:59:06 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /participants
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/test.d...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/test.d...', 27, Array)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/test.d...', 27, Array)
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-22 10:01:01 Error: Fatal Error (1): Call to a member function allow() on a non-object in [/var/www/test.dev/buildmaxcake2-v2/app/Controller/ParticipantsController.php, line 27]
+2015-05-22 10:01:01 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /participants
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/test.d...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/test.d...', 27, Array)
+#2 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/test.d...', 27, Array)
+#3 /var/www/test.dev/buildmaxcake2-v2/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-22 10:11:36 Error: [MissingControllerException] Controller class Currentsetting.htmController could not be found.
+Exception Attributes: array (
+  'class' => 'Currentsetting.htmController',
+  'plugin' => NULL,
+)
+Request URL: /currentsetting.htm
+Stack Trace:
+#0 /var/www/test.dev/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-27 18:47:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/bootstrap-theme.min.js
+Stack Trace:
+#0 /var/www/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-29 23:01:19 Error: [MissingHelperException] Helper class SearchHelper could not be found.
+Exception Attributes: array (
+  'class' => 'SearchHelper',
+  'plugin' => false,
+)
+Request URL: /cities
+Stack Trace:
+#0 /var/www/buildmaxcake2-v2/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Search')
+#1 /var/www/buildmaxcake2-v2/lib/Cake/View/View.php(848): HelperCollection->__isset('Search')
+#2 /var/www/buildmaxcake2-v2/app/View/Cities/index.ctp(23): View->__get('Search')
+#3 /var/www/buildmaxcake2-v2/lib/Cake/View/View.php(961): include('/var/www/buildm...')
+#4 /var/www/buildmaxcake2-v2/lib/Cake/View/View.php(923): View->_evaluate('/var/www/buildm...', Array)
+#5 /var/www/buildmaxcake2-v2/lib/Cake/View/View.php(473): View->_render('/var/www/buildm...')
+#6 /var/www/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#7 /var/www/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /var/www/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CitiesController), Object(CakeRequest))
+#9 /var/www/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-05-29 23:02:54 Error: Fatal Error (1): Call to a member function addFilters() on a non-object in [/var/www/buildmaxcake2-v2/app/Controller/CitiesController.php, line 34]
+2015-05-29 23:02:54 Error: [FatalErrorException] Call to a member function addFilters() on a non-object
+Request URL: /cities
+Stack Trace:
+#0 /var/www/buildmaxcake2-v2/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/buildm...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/buildm...', 34, Array)
+#2 /var/www/buildmaxcake2-v2/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/buildm...', 34, Array)
+#3 /var/www/buildmaxcake2-v2/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-29 23:02:54 Error: Fatal Error (1): Call to a member function addFilters() on a non-object in [/var/www/buildmaxcake2-v2/app/Controller/CitiesController.php, line 34]
+2015-05-29 23:02:54 Error: [FatalErrorException] Call to a member function addFilters() on a non-object
+Request URL: /cities
+Stack Trace:
+#0 /var/www/buildmaxcake2-v2/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/buildm...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/buildm...', 34, Array)
+#2 /var/www/buildmaxcake2-v2/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/buildm...', 34, Array)
+#3 /var/www/buildmaxcake2-v2/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-29 23:03:19 Error: Fatal Error (1): Call to a member function addFilters() on a non-object in [/var/www/buildmaxcake2-v2/app/Controller/CitiesController.php, line 34]
+2015-05-29 23:03:19 Error: [FatalErrorException] Call to a member function addFilters() on a non-object
+Request URL: /cities
+Stack Trace:
+#0 /var/www/buildmaxcake2-v2/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/buildm...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/buildm...', 34, Array)
+#2 /var/www/buildmaxcake2-v2/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/buildm...', 34, Array)
+#3 /var/www/buildmaxcake2-v2/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-29 23:03:19 Error: Fatal Error (1): Call to a member function addFilters() on a non-object in [/var/www/buildmaxcake2-v2/app/Controller/CitiesController.php, line 34]
+2015-05-29 23:03:19 Error: [FatalErrorException] Call to a member function addFilters() on a non-object
+Request URL: /cities
+Stack Trace:
+#0 /var/www/buildmaxcake2-v2/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/buildm...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/buildm...', 34, Array)
+#2 /var/www/buildmaxcake2-v2/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/buildm...', 34, Array)
+#3 /var/www/buildmaxcake2-v2/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-29 23:05:18 Error: Fatal Error (64): Cannot redeclare AppController::$helpers in [/var/www/buildmaxcake2-v2/app/Controller/AppController.php, line 71]
+2015-05-29 23:05:18 Error: [FatalErrorException] Cannot redeclare AppController::$helpers
+Request URL: /cities
+Stack Trace:
+#0 /var/www/buildmaxcake2-v2/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/var/www/buildm...', 71)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/var/www/buildm...', 71, Array)
+#2 /var/www/buildmaxcake2-v2/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/var/www/buildm...', 71, Array)
+#3 /var/www/buildmaxcake2-v2/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-29 23:06:43 Error: [Exception] Serialization of 'Closure' is not allowed
+Request URL: /cities
+Stack Trace:
+#0 /var/www/buildmaxcake2-v2/lib/Cake/Cache/Engine/FileEngine.php(130): serialize(Array)
+#1 /var/www/buildmaxcake2-v2/lib/Cake/Cache/Cache.php(317): FileEngine->write('cake_toolbar_ca...', Array, 14400)
+#2 /var/www/buildmaxcake2-v2/app/Plugin/DebugKit/Controller/Component/ToolbarComponent.php(501): Cache::write('toolbar_cache77...', Array, 'debug_kit')
+#3 /var/www/buildmaxcake2-v2/app/Plugin/DebugKit/Controller/Component/ToolbarComponent.php(330): ToolbarComponent->_saveState(Object(CitiesController), Array)
+#4 [internal function]: ToolbarComponent->beforeRender(Object(CitiesController))
+#5 /var/www/buildmaxcake2-v2/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#6 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#7 /var/www/buildmaxcake2-v2/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /var/www/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(932): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /var/www/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#10 /var/www/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CitiesController), Object(CakeRequest))
+#11 /var/www/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-29 23:06:43 Error: [Exception] Serialization of 'Closure' is not allowed
+Request URL: /cities
+Stack Trace:
+#0 /var/www/buildmaxcake2-v2/lib/Cake/Cache/Engine/FileEngine.php(130): serialize(Array)
+#1 /var/www/buildmaxcake2-v2/lib/Cake/Cache/Cache.php(317): FileEngine->write('cake_toolbar_ca...', Array, 14400)
+#2 /var/www/buildmaxcake2-v2/app/Plugin/DebugKit/Controller/Component/ToolbarComponent.php(501): Cache::write('toolbar_cache77...', Array, 'debug_kit')
+#3 /var/www/buildmaxcake2-v2/app/Plugin/DebugKit/Controller/Component/ToolbarComponent.php(330): ToolbarComponent->_saveState(Object(CitiesController), Array)
+#4 [internal function]: ToolbarComponent->beforeRender(Object(CitiesController))
+#5 /var/www/buildmaxcake2-v2/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#6 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#7 /var/www/buildmaxcake2-v2/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#8 /var/www/buildmaxcake2-v2/lib/Cake/Controller/Controller.php(932): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /var/www/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#10 /var/www/buildmaxcake2-v2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CitiesController), Object(CakeRequest))
+#11 /var/www/buildmaxcake2-v2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

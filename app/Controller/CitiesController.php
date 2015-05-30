@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('Sanitize', 'Utility');
 
 /**
  * Cities Controller
@@ -29,6 +30,17 @@ public $components = array('Paginator', 'RequestHandler', 'CsvView.CsvView','Ses
 	public function index() {
 		$this->City->recursive = 0;
 		$this->set('cities', $this->Paginator->paginate());
+
+		 // Add filter
+   		 $this->Filter->addFilters('filter1');
+    
+    		// Define conditions
+   		 $this->Filter->setPaginate('conditions', $this->Filter->getConditions());
+
+   		 $this->City->recursive = 0;
+    		 $this->set('cities', $this->paginate());
+
+
 	}
 
 /**
