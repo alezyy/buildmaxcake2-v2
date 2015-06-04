@@ -60,6 +60,9 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 
+
+
+
 /**
  * Plugins need to be loaded manually, you can either load them one by one or all of them in a single call
  * Uncomment one of the lines below, as you need. Make sure you read the documentation on CakePlugin to use more
@@ -69,12 +72,56 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
+	
+//CakePlugin::load('ReportManager',array('bootstrap' => true)); 
+	CakePlugin::loadAll();
+
 
 /**
  * To prefer app translation over plugin translation, you can set
  *
  * Configure::write('I18n.preferApp', true);
  */
+
+
+
+//Configure::write('ReportManager.reportPath', 'tmp'.DS.'reports'.DS);
+
+
+Configure::write('ReportManager.displayForeignKeys', 0);
+Configure::write('ReportManager.globalFieldIgnoreList', array(
+    'id',
+    'created',
+    'modified'
+));
+Configure::write('ReportManager.modelIgnoreList',array(
+    'AppModel',
+    'MyModel2'
+));
+Configure::write('ReportManager.modelFieldIgnoreList',array(
+    'MyModel' => array(
+        'field1'=>'field1',
+        'field2'=>'field2',
+        'field3'=>'field3'
+    )
+));
+Configure::write('ReportManager.reportPath', 'tmp'.DS.'reports'.DS);
+Configure::write('ReportManager.labelFieldList',array(
+    '*' => array(
+        'field1'=>'my field 1 label description',
+        'field2'=>'my field 2 label description',
+        'field3'=>'my field 3 label description'
+    ),
+    'MyModel' => array(
+        'field1' => 'my MyModel field 1 label description'
+    )
+));
+
+
+
+
+
+
 
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
@@ -93,10 +140,6 @@ Cache::config('default', array('engine' => 'File'));
  *
  * ));
  */
-Configure::write('Dispatcher.filters', array(
-	'AssetDispatcher',
-	'CacheDispatcher'
-));
 
 /**
  * Configures default file logging options

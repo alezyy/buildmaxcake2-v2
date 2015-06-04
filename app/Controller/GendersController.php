@@ -50,10 +50,10 @@ class GendersController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Gender->create();
 			if ($this->Gender->save($this->request->data)) {
-				$this->Session->setFlash(__('The gender has been saved.'));
+				$this->Session->setFlash(__('The gender has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The gender could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The gender could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 	}
@@ -71,10 +71,10 @@ class GendersController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Gender->save($this->request->data)) {
-				$this->Session->setFlash(__('The gender has been saved.'));
+				$this->Session->setFlash(__('The gender has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The gender could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The gender could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('Gender.' . $this->Gender->primaryKey => $id));
@@ -94,11 +94,11 @@ class GendersController extends AppController {
 		if (!$this->Gender->exists()) {
 			throw new NotFoundException(__('Invalid gender'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		$this->request->onlyAllow('post', 'delete');
 		if ($this->Gender->delete()) {
-			$this->Session->setFlash(__('The gender has been deleted.'));
+			$this->Session->setFlash(__('The gender has been deleted.'), 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('The gender could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('The gender could not be deleted. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

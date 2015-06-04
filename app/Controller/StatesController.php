@@ -50,12 +50,14 @@ class StatesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->State->create();
 			if ($this->State->save($this->request->data)) {
-				$this->Session->setFlash(__('The state has been saved.'));
+				$this->Session->setFlash(__('The state has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The state could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The state could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		}
+		$countries = $this->State->Country->find('list');
+		$this->set(compact('countries'));
 	}
 
 /**
@@ -71,15 +73,17 @@ class StatesController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->State->save($this->request->data)) {
-				$this->Session->setFlash(__('The state has been saved.'));
+				$this->Session->setFlash(__('The state has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The state could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The state could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('State.' . $this->State->primaryKey => $id));
 			$this->request->data = $this->State->find('first', $options);
 		}
+		$countries = $this->State->Country->find('list');
+		$this->set(compact('countries'));
 	}
 
 /**
@@ -94,46 +98,12 @@ class StatesController extends AppController {
 		if (!$this->State->exists()) {
 			throw new NotFoundException(__('Invalid state'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		$this->request->onlyAllow('post', 'delete');
 		if ($this->State->delete()) {
-			$this->Session->setFlash(__('The state has been deleted.'));
+			$this->Session->setFlash(__('The state has been deleted.'), 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('The state could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('The state could not be deleted. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
-
-        public function getByState() { 
-
-	  $country_id = $this->request->data['City']['country_id'];
-	  $states = $this->State->find('list', array( 'conditions' => array('State.country_id' =>     
-                                                                              $country_id), 
-                                                      'fields'=>array('id','state'),
-                                                      'recursive' => -1));
-
-
-                                              $this->set('states', $states); 
-                                              $this->layout = 'ajax';
-
-			}
-
-
-		 public function getByState_rentalowner() { 
-
-	  $country_id = $this->request->data['RentalOwner']['country_id'];
-	  $states = $this->State->find('list', array( 'conditions' => array('State.country_id' =>     
-                                                                              $country_id), 
-                                                      'fields'=>array('id','state'),
-                                                      'recursive' => -1));
-
-
-                                              $this->set('states', $states); 
-                                              $this->layout = 'ajax'; 
-
-			}
-
-
 }
-
-
-

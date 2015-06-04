@@ -1,17 +1,45 @@
 <div class="leasestypes form">
-<?php echo $this->Form->create('Leasestype'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Leasestype'); ?></legend>
-	<?php
-		echo $this->Form->input('type_lease');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
 
-		<li><?php echo $this->Html->link(__('List Leasestypes'), array('action' => 'index')); ?></li>
-	</ul>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><?php echo __('Add Leasestype'); ?></h1>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-md-3">
+			<div class="actions">
+				<div class="panel panel-default">
+					<div class="panel-heading">Actions</div>
+						<div class="panel-body">
+							<ul class="nav nav-pills nav-stacked">
+
+																<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Leasestypes'), array('action' => 'index'), array('escape' => false)); ?></li>
+									<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Applications Leases'), array('controller' => 'applications_leases', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Applications Lease'), array('controller' => 'applications_leases', 'action' => 'add'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Units'), array('controller' => 'units', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Unit'), array('controller' => 'units', 'action' => 'add'), array('escape' => false)); ?> </li>
+							</ul>
+						</div>
+					</div>
+				</div>			
+		</div><!-- end col md 3 -->
+		<div class="col-md-9">
+			<?php echo $this->Form->create('Leasestype', array('role' => 'form')); ?>
+
+				<div class="form-group">
+					<?php echo $this->Form->input('type_lease', array('class' => 'form-control', 'placeholder' => 'Type Lease'));?>
+				</div>
+				<div class="form-group">
+					<?php echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-default')); ?>
+				</div>
+
+			<?php echo $this->Form->end() ?>
+
+		</div><!-- end col md 12 -->
+	</div><!-- end row -->
 </div>

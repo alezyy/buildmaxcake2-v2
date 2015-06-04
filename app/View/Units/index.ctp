@@ -19,7 +19,19 @@
 						<div class="panel-body">
 							<ul class="nav nav-pills nav-stacked">
 								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Unit'), array('action' => 'add'), array('escape' => false)); ?></li>
-													</ul>
+								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Properties'), array('controller' => 'properties', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Property'), array('controller' => 'properties', 'action' => 'add'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Rental Owners'), array('controller' => 'rental_owners', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Rental Owner'), array('controller' => 'rental_owners', 'action' => 'add'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Sizes'), array('controller' => 'sizes', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Size'), array('controller' => 'sizes', 'action' => 'add'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Leasestypes'), array('controller' => 'leasestypes', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Leasestype'), array('controller' => 'leasestypes', 'action' => 'add'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Statuses'), array('controller' => 'statuses', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Status'), array('controller' => 'statuses', 'action' => 'add'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Applications Leases'), array('controller' => 'applications_leases', 'action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Applications Lease'), array('controller' => 'applications_leases', 'action' => 'add'), array('escape' => false)); ?> </li>
+							</ul>
 						</div><!-- end body -->
 				</div><!-- end panel -->
 			</div><!-- end actions -->
@@ -54,21 +66,31 @@
 				<?php foreach ($units as $unit): ?>
 					<tr>
 						<td><?php echo h($unit['Unit']['id']); ?>&nbsp;</td>
-						<td><?php echo h($unit['Unit']['property_id']); ?>&nbsp;</td>
-						<td><?php echo h($unit['Unit']['rental_owner_id']); ?>&nbsp;</td>
+								<td>
+			<?php echo $this->Html->link($unit['Property']['propertiestype_id'], array('controller' => 'properties', 'action' => 'view', $unit['Property']['id'])); ?>
+		</td>
+								<td>
+			<?php echo $this->Html->link($unit['RentalOwner']['gender_id'], array('controller' => 'rental_owners', 'action' => 'view', $unit['RentalOwner']['id'])); ?>
+		</td>
 						<td><?php echo h($unit['Unit']['unit_number']); ?>&nbsp;</td>
-						<td><?php echo h($unit['Unit']['size_id']); ?>&nbsp;</td>
+								<td>
+			<?php echo $this->Html->link($unit['Size']['id'], array('controller' => 'sizes', 'action' => 'view', $unit['Size']['id'])); ?>
+		</td>
 						<td><?php echo h($unit['Unit']['market_rent']); ?>&nbsp;</td>
 						<td><?php echo h($unit['Unit']['bedrooms']); ?>&nbsp;</td>
 						<td><?php echo h($unit['Unit']['bath']); ?>&nbsp;</td>
 						<td><?php echo h($unit['Unit']['lease_term']); ?>&nbsp;</td>
-						<td><?php echo h($unit['Unit']['leasestype_id']); ?>&nbsp;</td>
+								<td>
+			<?php echo $this->Html->link($unit['Leasestype']['id'], array('controller' => 'leasestypes', 'action' => 'view', $unit['Leasestype']['id'])); ?>
+		</td>
 						<td><?php echo h($unit['Unit']['rental_amount']); ?>&nbsp;</td>
 						<td><?php echo h($unit['Unit']['deposit_amount']); ?>&nbsp;</td>
 						<td><?php echo h($unit['Unit']['description']); ?>&nbsp;</td>
 						<td><?php echo h($unit['Unit']['features']); ?>&nbsp;</td>
 						<td><?php echo h($unit['Unit']['photo']); ?>&nbsp;</td>
-						<td><?php echo h($unit['Unit']['status_id']); ?>&nbsp;</td>
+								<td>
+			<?php echo $this->Html->link($unit['Status']['id'], array('controller' => 'statuses', 'action' => 'view', $unit['Status']['id'])); ?>
+		</td>
 						<td><?php echo h($unit['Unit']['created']); ?>&nbsp;</td>
 						<td><?php echo h($unit['Unit']['modified']); ?>&nbsp;</td>
 						<td class="actions">

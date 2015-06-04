@@ -60,6 +60,9 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 
+
+
+
 /**
  * Plugins need to be loaded manually, you can either load them one by one or all of them in a single call
  * Uncomment one of the lines below, as you need. Make sure you read the documentation on CakePlugin to use more
@@ -70,13 +73,21 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 	
+//CakePlugin::load('ReportManager',array('bootstrap' => true)); 
 	CakePlugin::loadAll();
+
 
 /**
  * To prefer app translation over plugin translation, you can set
  *
  * Configure::write('I18n.preferApp', true);
  */
+
+
+
+//Configure::write('ReportManager.reportPath', 'tmp'.DS.'reports'.DS);
+
+
 
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
@@ -95,10 +106,6 @@ Cache::config('default', array('engine' => 'File'));
  *
  * ));
  */
-Configure::write('Dispatcher.filters', array(
-	'AssetDispatcher',
-	'CacheDispatcher'
-));
 
 /**
  * Configures default file logging options

@@ -50,10 +50,10 @@ class ApplicationsLeasesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->ApplicationsLease->create();
 			if ($this->ApplicationsLease->save($this->request->data)) {
-				$this->Session->setFlash(__('The applications lease has been saved.'));
+				$this->Session->setFlash(__('The applications lease has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The applications lease could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The applications lease could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 	}
@@ -71,10 +71,10 @@ class ApplicationsLeasesController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->ApplicationsLease->save($this->request->data)) {
-				$this->Session->setFlash(__('The applications lease has been saved.'));
+				$this->Session->setFlash(__('The applications lease has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The applications lease could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The applications lease could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('ApplicationsLease.' . $this->ApplicationsLease->primaryKey => $id));
@@ -94,11 +94,11 @@ class ApplicationsLeasesController extends AppController {
 		if (!$this->ApplicationsLease->exists()) {
 			throw new NotFoundException(__('Invalid applications lease'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		$this->request->onlyAllow('post', 'delete');
 		if ($this->ApplicationsLease->delete()) {
-			$this->Session->setFlash(__('The applications lease has been deleted.'));
+			$this->Session->setFlash(__('The applications lease has been deleted.'), 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('The applications lease could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('The applications lease could not be deleted. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

@@ -50,10 +50,10 @@ class PropertiesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Property->create();
 			if ($this->Property->save($this->request->data)) {
-				$this->Session->setFlash(__('The property has been saved.'));
+				$this->Session->setFlash(__('The property has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The property could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The property could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 	}
@@ -71,10 +71,10 @@ class PropertiesController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Property->save($this->request->data)) {
-				$this->Session->setFlash(__('The property has been saved.'));
+				$this->Session->setFlash(__('The property has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The property could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The property could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('Property.' . $this->Property->primaryKey => $id));
@@ -94,11 +94,11 @@ class PropertiesController extends AppController {
 		if (!$this->Property->exists()) {
 			throw new NotFoundException(__('Invalid property'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		$this->request->onlyAllow('post', 'delete');
 		if ($this->Property->delete()) {
-			$this->Session->setFlash(__('The property has been deleted.'));
+			$this->Session->setFlash(__('The property has been deleted.'), 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('The property could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('The property could not be deleted. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
